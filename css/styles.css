@@ -1,0 +1,166 @@
+.hamburger-menu {
+    display: none;
+}
+
+video {
+  outline: none;
+}
+
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+.menu-toggle {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 27px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 11;
+}
+/* добавляем "гамбургер" */
+.menu-toggle > span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition: .3s;
+}
+.menu-toggle > .menu-toggle-span1 {
+  content: '';
+  top: 0;
+}
+.menu-toggle > .menu-toggle-span2 {
+	content: '';
+	top:8px;
+}
+
+.menu-toggle > .menu-toggle-span3 {
+  content: '';
+  top: 16px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter:blur(6px);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition: .3s;
+  z-index: 1;
+}
+
+.menu__box li a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-family: 'Roboto' , arial;
+  font-size: 23px;
+  font-weight: 100;
+  text-decoration: none;
+  transition: .3s;
+}
+.menu__box li a:hover {
+  background-color: #3d3d42;
+  transition: .3s;
+}
+
+.menu__box li {
+	width: 100%;
+}
+
+.box-hidden {
+	right: -100%;
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color:white !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.menu__item:hover {
+  background-color: black;
+}
+
+.menu-toggle.link-active > .menu-toggle-span2 {
+	transform: scale(0);
+}
+
+.menu-toggle.link-active > .menu-toggle-span1 {
+	transform: rotate(45deg);
+	top:8px;
+}
+
+.menu-toggle.link-active > .menu-toggle-span3 {
+	transform: rotate(-45deg);
+	top:8px;
+}
+
+.menu-active {
+  visibility: visible;
+  right: 0;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+  .active {
+      text-shadow: 0px 0px 2px;
+  }
+
+  .modal-content {
+    border-radius: 0 !important;
+    border:0 !important;
+    background: #3f4049 !important;
+  }
+
+  .modal-dialog {
+    max-width: 800px !important;
+  }
+
+  .modal-header,.modal-footer {
+    border:0 !important;
+  }
+
+ .modal-body__img {
+    width: 100%;
+  }
+
+  .modal-body__img img {
+    width: 100%;
+  }
+
+  @media screen and (max-width:1024px) {
+      .hamburger-menu {
+          display: block;
+      }
+
+      .navigation__nav {
+          display: none !important;
+      }
+  }

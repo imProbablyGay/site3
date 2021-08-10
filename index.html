@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="js/ourTeamSlider.js" defer></script>
+    <script src="js/testimonialsSlider.js" defer></script>
+    <script src="js/ourBlog.js" defer></script>
+    <script src="js/lazyLoad.js" defer></script>
+    <script src="js/anchors.js" defer></script>
+</head>
+<div class="loading-window">
+    <div class="spinner-border" role="status">
+      </div>
+  </div>
+
+  <script>
+      let loadingWindowItem = document.querySelector('.loading-window');
+      
+      window.addEventListener('load' , () => {
+          loadingWindowItem.style.opacity = 0;
+
+          loadingWindowItem.ontransitionend = () => {
+            loadingWindowItem.remove();
+          }
+      });
+  </script>
+    
+    <!-- header -->
+    <header class="header">
+        <div class="navigation fixed-top">
+            <div class="container navigation__main">
+
+                <div class="navigation__logo">
+                    <img src="img/Alexis.png" alt="">
+                </div>
+
+                <nav class="row navigation__nav">
+                    <ul>
+                        <li><a href="#about-us" title='About Us'>About Us</a></li>
+                        <li><a href="#our-focus" title="Our Focus">Our Focus</a></li>
+                        <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+                        <li><a href="#our-team">Our Team</a></li>
+                        <li><a href="#work-steps">Work Steps</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- burger -->
+                <div class="hamburger-menu">
+                    <div class="menu-toggle">
+                        <span class="menu-toggle-span1"></span>
+                        <span class="menu-toggle-span2"></span>
+                        <span class="menu-toggle-span3"></span>
+                    </div>
+
+                    <ul class="menu__box">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#our-focus">Our Focus</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#our-team">Our Team</a></li>
+                        <li><a href="#work-steps">Work Steps</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            <!-- burger -->
+
+            <script>
+                let menu = document.querySelector('.menu-toggle');
+                let menuBox = document.querySelector('.menu__box');
+                let menuBoxItems = document.querySelectorAll('.menu__box li');
+    
+                menuBoxItems.forEach(current => {
+                    current.onclick = () => {
+                        menu.classList.toggle('link-active');
+                        menuBox.classList.remove('menu-active');
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                });
+    
+                menu.onclick = (e) => {
+                    e.preventDefault();
+                    menu.classList.toggle('link-active');
+                    menuBox.classList.toggle('menu-active');
+                    document.body.classList.toggle('overflow-hidden');
+                };
+            </script>
+
+            </div>
+        </div>
+
+        <!-- header content -->
+        <div class="we-design container">
+            <div class="row text-center lazy-load lazy-load_onload we-design__animation" data-lazy-class='we-design__animation_active'><h1>We design things with love<br>and passion</h1></div>
+            <div class="row"><a href="#portfolio" class="we-design__button text-center lazy-load lazy-load_onload we-design__animation" data-lazy-class='we-design__animation_active'>our works</a></div>
+
+            <div class="we-design__cards">
+                <div class="we-design__card lazy-load lazy-load_onload we-design__animation" data-lazy-class='we-design__animation_active'>
+                    <img src="img/we-design1.png" alt="">
+                    <p style="color:#38c695;">fixed price projects</p>
+                </div>
+                <div class="we-design__card lazy-load lazy-load_onload we-design__animation" data-lazy-class='we-design__animation_active'>
+                    <img src="img/we-design2.png" alt="">
+                    <p style="color:#b27cf5;">receive on time</p>
+                </div>
+                <div class="we-design__card lazy-load lazy-load_onload we-design__animation" data-lazy-class='we-design__animation_active'>
+                    <img src="img/we-design3.png" alt="">
+                    <p style='color:#ebac5d;'>satisfaction guranteed</p>
+                </div>
+            </div>
+        </div>
+        <!-- header content -->
+
+    </header>
+    <!-- /header -->
+
+    <main>
+        <!-- about us -->
+        <section class="section anchors-section" id="about-us">
+            <div class="about-us container">
+                <div class="img about-us__img">
+                    <img src="img/image3.png" alt="">
+                </div>
+                <div class="about-us__right about-us__animation lazy-load" data-lazy-class="about-us__animation_active">
+                    <div class="about-us__text">
+                        <p class="section-title left">01</p>
+
+                        <h3>About Us.</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus eveniet? Quam aut veniam, sequi ex cupiditate nesciunt aliquam consectetur modi commodi molestias. Omnis deserunt debitis ullam facere odio maxime, rem dolore quibusdam quas fugit, quo eveniet aspernatur eum, ipsum obcaecati iusto natus placeat quisquam culpa minima. Eos voluptates saepe delectus minima ducimus est! Nisi non provident animi veniam explicabo facere natus distinctio, ducimus nihil quam maxime sapiente quis eaque?</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur minima quae quis cum harum expedita perspiciatis, quam repellat. Vitae odit suscipit amet consequatur dolores accusamus optio aperiam quae officiis sit!</p>
+                         <div class="about-us__bottom-line">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--/ about us -->
+
+        <!-- our focus -->
+        <section class="section anchors-section" id='our-focus'>
+            <div class="our-focus">
+                <div class="container">
+                    <div class="row">
+                        <div class="our-focus__title section-header">
+                            <p class="section-title center">02</p>
+                            <h3>Our Focus</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                    <div class="our-focus__cards row">
+                        <div class="col-xl-3 col-md-6 col-12 d-flex our-focus__animation lazy-load" data-lazy-class="our-focus__animation_active">
+                            <div class="our-focus__card">
+                                <img src="img/our-focus1.png" alt="">
+                                <h4>Web Design</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium natus esse, voluptates aliquid.</p>
+                                <div class="our-focus__line our-focus__line_darkorange"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-12 d-flex our-focus__animation lazy-load" data-lazy-class="our-focus__animation_active">
+                            <div class="our-focus__card">
+                                <img src="img/our-focus2.png" alt="">
+                                <h4>UX Design</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium amet consectetur adipisicing elit. Iste accusantium natus esse, voluptates a</p>
+                                <div class="our-focus__line our-focus__line_green"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-12 d-flex our-focus__animation lazy-load" data-lazy-class="our-focus__animation_active">
+                            <div class="our-focus__card">
+                                <img src="img/our-focus3.png" alt="">
+                                <h4>Photography</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste  natus esse, voluptates aliquid quaerat.</p>
+                                <div class="our-focus__line our-focus__line_violet"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-12 d-flex our-focus__animation lazy-load" data-lazy-class="our-focus__animation_active">
+                            <div class="our-focus__card">
+                                <img src="img/our-focus4.png" alt="">
+                                <h4>App Development</h4>
+                                <p>Lorem, ipsum dolor sit amet  adipisicing elit. Iste accusantium natus esse, voluptates aliquid quaerat.</p>
+                                <div class="our-focus__line our-focus__line_orange"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="container-fluid our-focus__video" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <div class="row">
+                        <div class="col-12 text-center our-focus__text">
+                            <h4>Explore Our Awesomeness</h4>
+                            <p>Click to play the video</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </section>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video controls autoplay width="100%">
+                        <source src="video/rick-roll.ogv">
+                    </video>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script>
+            //video logic...
+            window.addEventListener('load' , () => {
+                modal.querySelector('video').src = '';
+            });
+
+            let modal = document.querySelector('.modal');
+            let ourFocusVideo = document.querySelector('.our-focus__video');
+
+            modal.querySelector('button').onclick = () => {
+                modal.querySelector('video').setAttribute('src' , '')
+            }
+
+            ourFocusVideo.addEventListener('click' , () => {
+                modal.querySelector('video').setAttribute('src' , 'video/rick-roll.ogv')
+            })
+        </script>
+
+        <!-- /our focus -->
+    
+        <!-- portfolio -->
+        <section class="section anchors-section" id='portfolio'>
+            <div class="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="portfolio__title section-header">
+                            <p class="section-title center">03</p>
+                            <h3>Portfolio</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row portfolio__cards">
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/1.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal-first" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/2.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/3.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/4.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/5.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/6.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/7.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-6 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/8.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                        <div class="portfolio__card col-md-4 col-12 portfolio__animation lazy-load" data-lazy-class="portfolio__animation_active"><img src="img/portfolio/9.png" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolio-modal" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="portfolio-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="portfolio-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body__img"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- modal for first button -->
+        <div class="modal fade" id="portfolio-modal-first" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="portfolio-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="color:white; font-weight: 300;margin-bottom: 30px;">Write the image URL to add it on page</h4>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://example-img.com</span>
+                    </div>
+                    <input type="text" class="form-control first-modal-inp" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-close" data-bs-dismiss="modal">Save and close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- default modal -->
+        <script>
+            let portfolioModal = document.querySelector('#portfolio-modal .modal-body');
+            let portfolioCardsImg = document.querySelectorAll('.portfolio__card img');
+
+            for (let key in portfolioCardsImg) {
+                portfolioCardsImg[key].onclick = () => {
+                    let portfolioImgSRC = portfolioCardsImg[key].getAttribute('src');
+                    portfolioModal.querySelector('.modal-body__img').innerHTML = `<img src='${portfolioImgSRC}'>`;
+                }
+            }
+        </script>
+
+        <!-- first modal script -->
+        <script>
+            let firstModalInp = document.querySelector('.first-modal-inp');
+            let modalClose = document.querySelector('.modal-close');
+            let allItems = document.querySelector('.portfolio__cards');
+            let portfolioItem = document.querySelectorAll('.portfolio__card img');
+
+            modalClose.onclick = () => {
+                let value = firstModalInp.value;
+                let newItem = document.createElement('div');
+                newItem.classList.add('portfolio__card','col-md-4','col-sm-6');
+                let img = document.createElement('img');
+                img.setAttribute('type','button');
+                img.setAttribute('data-bs-toggle','modal');
+                img.setAttribute('data-bs-target','#portfolio-modal');
+                img.setAttribute('src',value);
+                newItem.append(img);
+                allItems.append(newItem);
+
+                // if wrong url
+                img.onerror = function() {
+                    this.parentNode.hidden = true;
+                }
+
+                // set new portfolio cards collection
+                portfolioCardsImg = document.querySelectorAll('.portfolio__card img');
+
+                for (let key in portfolioCardsImg) {
+                    portfolioCardsImg[key].onclick = () => {
+                        let portfolioImgSRC = portfolioCardsImg[key].getAttribute('src');
+                        portfolioModal.querySelector('.modal-body__img').innerHTML = `<img src='${portfolioImgSRC}'>`;
+                    }
+                }
+            }
+        </script>
+        <!--/ portfolio -->
+
+        <!-- our team -->
+        <section class="section anchors-section" id="our-team">
+            <div class="our-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="our-team__title section-header">
+                            <p class="section-title center">04</p>
+                            <h3>Our Team</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="our-team__slider row">
+                        <div class="col-md-3 col-sm-12 our-team__animation">
+                            <div class="our-team__slider-toggler our-team__slider-item_active-tablet">
+                                <div class="our-team__slider-img">
+                                    <img src="img/image5.png" alt="">
+                                    <h5>Michael Schmitt</h5>
+                                    <p>Founder & CEO</p>
+
+                                    <div class="our-team__slider-line our-team__slider-line_darkorange"></div>
+                                </div>
+                                <div class="our-team__slider-figure our-team__slider_active"></div>
+                            </div>
+                        </div> 
+
+                        <div class="col-md-3 col-sm-12 our-team__animation">
+                            <div class="our-team__slider-toggler">
+                                <div class="our-team__slider-img">
+                                    <img src="img/image6.png" alt="">
+                                    <h5>David Kramer</h5>
+                                    <p>Lead Developer</p>
+
+                                    <div class="our-team__slider-line our-team__slider-line_green"></div>
+                                </div>
+                                <div class="our-team__slider-figure"></div>
+                            </div>
+                        </div> 
+
+                        <div class="col-md-3 col-sm-12 our-team__animation">
+                            <div class="our-team__slider-toggler">
+                                <div class="our-team__slider-img">
+                                    <img src="img/image7.png" alt="">
+                                    <h5>Anna Schroder</h5>
+                                    <p>Designer</p>
+
+                                    <div class="our-team__slider-line our-team__slider-line_violet"></div>
+                                </div>
+                                <div class="our-team__slider-figure"></div>
+                            </div>
+                        </div> 
+
+                        <div class="col-md-3 col-sm-12 our-team__animation">
+                            <div class="our-team__slider-toggler">
+                                <div class="our-team__slider-img">
+                                    <img src="img/image8.png" alt="">
+                                    <h5>Jason Teichmann</h5>
+                                    <p>Consultant</p>
+
+                                    <div class="our-team__slider-line our-team__slider-line_orange"></div>
+                                </div>
+                                <div class="our-team__slider-figure"></div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="row our-team__slider-bottom our-team__animation">
+                        <div class="our-team__slider-item our-team__slider_active">
+                            <div class="our-team__slider-text">
+                                <div class='our-team__slider-left'>
+                                    <h5>About Bennet</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eos ex laboriosam voluptates alias dolore temporibus asperiores,  magni maiores veniam veritatis praesentium corporis magnam laudantium, consequatur, laborum debitis. Quod veritatis fugit nam iure totam maxime voluptates dicta nesciunt, dignissimos adipisci , officiis ad vel laudantium est beatae, aspernatur rerum voluptatum! Odio consectetur deserunt pariatur eaque modi voluptatum deleniti  error omnis, adipisci architecto earum cupiditate, optio quas nesciunt. Labore, officia molestias animi quae quidem odit nesciunt quisquam, possimus exercitationem nobis numquam deleniti laboriosam molestiae mollitia repellendus suscipit dolor dolorum.</p>
+                                </div>
+
+                                <div class="our-team__slider-contact">
+                                    <img src="img/social/share.png" alt="">
+                                    <div class="line"></div>
+                                    <div class="our-team__slider-links">
+                                        <a href="#"><img src="img/social/1.png" alt=""><p>Facebook</p></a>
+                                        <a href="#"><img src="img/social/2.png" alt=""><p>Twitter</p></a>
+                                        <a href="#"><img src="img/social/3.png" alt=""><p>LinkedIn</p></a>
+                                        <a href="#"><img src="img/social/4.png" alt=""><p>Instagram</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="our-team__slider-item">
+                            <div class="our-team__slider-text">
+                                <div class='our-team__slider-left'>
+                                    <h5>About Sofia</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eos ex laboriosam voluptates alias dolore temporibus asperiores, error magni maiores veniam veritatis praesentium corporis magnam laudantium, consequatur, laborum debitis. Quod veritatis fugit nam iure totam maxime voluptates dicta nesciunt, dignissimos adipisci temporibus,  ad vel laudantium est beatae, aspernatur rerum voluptatum! Odio consectetur deserunt pariatur eaque modi voluptatum deleniti necessitatibus error omnis, adipisci architecto earum cupiditate, optio quas nesciunt. , officia molestias animi  quidem odit nesciunt quisquam, possimus exercitationem nobis numquam deleniti laboriosam molestiae mollitia repellendus suscipit dolor dolorum.</p>
+                                </div>
+    
+                                <div class="our-team__slider-contact">
+                                    <img src="img/social/share.png" alt="">
+                                    <div class="line"></div>
+                                    <div class="our-team__slider-links">
+                                        <a href="#"><img src="img/social/1.png" alt=""><p>Facebook</p></a>
+                                        <a href="#"><img src="img/social/2.png" alt=""><p>Twitter</p></a>
+                                        <a href="#"><img src="img/social/3.png" alt=""><p>LinkedIn</p></a>
+                                        <a href="#"><img src="img/social/4.png" alt=""><p>Instagram</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       <div class="our-team__slider-item">
+                            <div class="our-team__slider-text">
+                                <div class='our-team__slider-left'>
+                                    <h5>About Andrew</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eos ex laboriosam voluptates alias dolore temporibus asperiores, error magni maiores veniam veritatis praesentium corporis magnam laudantium, consequatur, laborum . Quod veritatis fugit nam iure totam maxime voluptates dicta nesciunt, dignissimos adipisci temporibus, officiis ad vel laudantium est beatae, aspernatur rerum voluptatum! Odio consectetur deserunt pariatur eaque modi voluptatum deleniti necessitatibus error omnis, adipisci  earum cupiditate, optio quas nesciunt. Labore, officia molestias  quae quidem odit nesciunt quisquam, possimus exercitationem nobis numquam deleniti laboriosam molestiae mollitia repellendus suscipit dolor dolorum.</p>
+                                </div>
+
+                                <div class="our-team__slider-contact">
+                                    <img src="img/social/share.png" alt="">
+                                    <div class="line"></div>
+                                    <div class="our-team__slider-links">
+                                        <a href="#"><img src="img/social/1.png" alt=""><p>Facebook</p></a>
+                                        <a href="#"><img src="img/social/2.png" alt=""><p>Twitter</p></a>
+                                        <a href="#"><img src="img/social/3.png" alt=""><p>LinkedIn</p></a>
+                                        <a href="#"><img src="img/social/4.png" alt=""><p>Instagram</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+
+                       <div class="our-team__slider-item">
+                            <div class="our-team__slider-text">
+                                <div class='our-team__slider-left'>
+                                    <h5>About Zschir</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eos ex laboriosam voluptates alias dolore temporibus asperiores, error magni maiores veniam veritatis praesentium corporis magnam laudantium, consequatur, laborum debitis. Quod veritatis fugit nam iure totam maxime voluptates dicta nesciunt, dignissimos adipisci temporibus, officiis ad vel laudantium est beatae, aspernatur rerum voluptatum! Odio consectetur deserunt pariatur eaque modi voluptatum deleniti necessitatibus error omnis, adipisci architecto earum cupiditate, optio quas nesciunt. Labore, officia molestias animi quae quidem odit nesciunt quisquam, possimus exercitationem nobis numquam deleniti laboriosam molestiae mollitia repellendus suscipit dolor dolorum.</p>
+                                </div>
+
+                                <div class="our-team__slider-contact">
+                                    <img src="img/social/share.png" alt="">
+                                    <div class="line"></div>
+                                    <div class="our-team__slider-links">
+                                        <a href="#"><img src="img/social/1.png" alt=""><p>Facebook</p></a>
+                                        <a href="#"><img src="img/social/2.png" alt=""><p>Twitter</p></a>
+                                        <a href="#"><img src="img/social/3.png" alt=""><p>LinkedIn</p></a>
+                                        <a href="#"><img src="img/social/4.png" alt=""><p>Instagram</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="our-team__statistic">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-6 our-team__statistic-item our-team__statistic-animation">
+                                <img src="img/dsf.png" alt="">
+                                <h4>12,<span>458</span>+</h4>
+                                <p>Projects Completed</p>
+                                <img src="img/dsf5.png" alt="">
+                            </div>
+                            <div class="col-md-3 col-6 our-team__statistic-item our-team__statistic-animation">
+                                <img src="img/dsf2.png" alt="">
+                                <h4>1,<span>796</span>+</h4>
+                                <p>Satisfied Clients</p>
+                                <img src="img/dsf6.png" alt="">
+                            </div>
+                            <div class="col-md-3 col-6 our-team__statistic-item our-team__statistic-animation">
+                                <img src="img/dsf3.png" alt="">
+                                <h4><span>1000</span>+</h4>
+                                <p>Positive Feedbacks</p>
+                                <img src="img/dsf7.png" alt="">
+                            </div>
+                            <div class="col-md-3 col-6 our-team__statistic-item our-team__statistic-animation">
+                                <img src="img/dsf4.png" alt="">
+                                <h4>1,<span>500</span>+</h4>
+                                <p> Freebies Released</p>
+                                <img src="img/dsf8.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- our team animation -->
+        <script>
+            let ourTeam = document.querySelector('#our-team');
+            let statistic = document.querySelector('.our-team__statistic')
+            window.addEventListener('scroll' ,(e) => {
+			    let top = Math.abs(document.querySelector('body').getBoundingClientRect().top - window.innerHeight + 400); //a = current body height
+                if (top >= ourTeam.offsetTop) {
+                    ourTeam.querySelectorAll('.our-team__animation').forEach(el => {
+                        el.classList.add('our-team__animation_active');
+                    })
+                }
+                // statistic numbers
+                if (top >= ourTeam.offsetTop + ourTeam.offsetHeight - statistic.offsetHeight) {
+                    statistic.querySelectorAll('.our-team__statistic-animation').forEach(el => {
+                        el.classList.add('our-team__statistic-animation_active');
+                    })
+                }
+            });
+        </script>
+        <!-- /our team -->
+
+        <!-- work steps -->
+        <section class="section anchors-section" id="work-steps">
+            <div class="work-steps">
+                <div class="container">
+                    <div class="row">
+                        <div class="work-steps__title section-header">
+                            <p class="section-title center">05</p>
+                            <h3>Work Steps</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="work-steps__cards row">
+                        <div class="work-steps__card col-12">
+                            <img src="img/image.png" alt="">
+                            <div class="work-steps__card-card work-steps__animation" style="transition-delay: .2s;">
+                                <h3>01</h3>
+                                <div class="work-steps__card-text">
+                                    <h4>Project Understanding</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident architecto perspiciatis officiis consequuntur impedit, eaque non, quasi sequi earum necessitatibus expedita dicta? Eum, adipisci qui?</p>
+                                </div>
+
+                                <div class="work-steps__line work-steps__line_darkorange"></div>
+                            </div>
+                        </div>
+                        <div class="work-steps__card col-12">
+                            <img src="img/image2.png" alt="">
+                            <div class="work-steps__card-card work-steps__card-card_right work-steps__animation" style="transition-delay: .4s;">
+                                <h3>02</h3>
+                                <div class="work-steps__card-text">
+                                    <h4>Research & Planning</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident architecto perspiciatis officiis consequuntur impedit, eaque non, quasi sequi earum necessitatibus expedita dicta? Eum, adipisci qui?</p>
+                                </div>
+
+                                <div class="work-steps__line work-steps__line_green"></div>
+                            </div>
+                        </div>
+                        <div class="work-steps__card col-12">
+                            <img src="img/image3.1.png" alt="">
+                            <div class="work-steps__card-card work-steps__animation" style="transition-delay: .6s;">
+                                <h3>03</h3>
+                                <div class="work-steps__card-text">
+                                    <h4>Wireframe & Design</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident architecto perspiciatis officiis consequuntur impedit, eaque non, quasi sequi earum necessitatibus expedita dicta? Eum, adipisci qui?</p>
+                                </div>
+
+                                <div class="work-steps__line work-steps__line_violet"></div>
+                            </div>
+                        </div>
+                        <div class="work-steps__card col-12">
+                            <img src="img/image4.png" alt="">
+                            <div class="work-steps__card-card work-steps__card-card_right work-steps__animation" style="transition-delay: .8s;">
+                                <h3>04</h3>
+                                <div class="work-steps__card-text">
+                                    <h4>Development</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident architecto perspiciatis officiis consequuntur impedit, eaque non, quasi sequi earum necessitatibus expedita dicta? Eum, adipisci qui?</p>
+                                </div>
+
+                                <div class="work-steps__line work-steps__line_orange"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- work steps animation -->
+        <script>
+            let workSteps = document.querySelector('#work-steps');
+            window.addEventListener('scroll' ,(e) => {
+			    let top = Math.abs(document.querySelector('body').getBoundingClientRect().top - window.innerHeight + 500); //a = current body height
+                if (top >= workSteps.offsetTop) {
+                    workSteps.querySelectorAll('.work-steps__animation').forEach(el => {
+                        el.classList.add('work-steps__animation_active');
+                    });
+                };
+            });
+        </script>        
+        <!-- /work steps -->
+
+
+        <!-- pricing table -->
+        <section class="section anchors-section" id="pricing">
+            <div class="pricing-table">
+                <div class="container">
+                    <div class="row">
+                        <div class="pricing-tablee__title section-header">
+                            <p class="section-title center">06</p>
+                            <h3>Pricing Table</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="pricing-table__cards row">
+                        <div class="col-md-4 col-sm-12 text-center pricing-table__animation lazy-load" data-lazy-class="pricing-table__animation_active">
+                            <div class="pricing-table__card">
+                                <div class="line line_green"></div>
+                                <h5 class="order-modal__title">Starter</h5>
+                                <div class="pricing-table__price pricing-table__price_green">
+                                    <h4>$125</h4>
+                                    <p>Per Month</p>
+                                </div>
+                                <p><strong>200GB</strong> Online Storage</p>
+                                <p><strong>20</strong> Files Per Day</p>
+                                <p><strong>2TB</strong> Montly Bandwidth</p>
+                                <p class="pricing-table__p-img">Secure Platform</p>
+                                <p class="pricing-table__p-img">24/7 Customer Support</p>
+                                <p class="pricing-table__p-img">Fast & Reliable</p>
+                                <button class="pricing-table__button pricing-table__button_green" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bg-color='#38c695'>GET STARTED</button>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 col-sm-12 text-center pricing-table__animation lazy-load" data-lazy-class="pricing-table__animation_active">
+                            <div class="pricing-table__card">
+                            <div class="line line_red"></div>
+                                <h5 class="order-modal__title">Ultimate</h5>
+                                <div class="pricing-table__price pricing-table__price_red">
+                                    <h4>$195</h4>
+                                    <p>Per Month</p>
+                                </div>
+                                <p><strong>800GB</strong> Online Storage</p>
+                                <p><strong>Unlimited</strong> Files Per Day</p>
+                                <p><strong>10TB</strong> Montly Bandwidth</p>
+                                <p class="pricing-table__p-img">Secure Platform</p>
+                                <p class="pricing-table__p-img">24/7 Customer Support</p>
+                                <p class="pricing-table__p-img">Fast & Reliable</p>
+                                <button class="pricing-table__button pricing-table__button_red" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bg-color='#fc5f45'>GET STARTED</button>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-4 col-sm-12 text-cente pricing-table__animation lazy-load" data-lazy-class="pricing-table__animation_active">
+                            <div class="pricing-table__card">
+                                <div class="line line_violet"></div>
+                                <h5 class="order-modal__title">Professional</h5>
+                                <div class="pricing-table__price pricing-table__price_violet">
+                                    <h4>$145</h4>
+                                    <p>Per Month</p>
+                                </div>
+                                <p><strong>200GB</strong> Online Storage</p>
+                                <p><strong>20</strong> Files Per Day</p>
+                                <p><strong>2TB</strong> Montly Bandwidth</p>
+                                <p class="pricing-table__p-img">Secure Platform</p>
+                                <p class="pricing-table__p-img">24/7 Customer Support</p>
+                                <p class="pricing-table__p-img">Fast & Reliable</p>
+                                <button class="pricing-table__button pricing-table__button_violet" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-bg-color='#b27cf5'>GET STARTED</button>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content order">
+                <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="order__form">
+                        <div class="order__email">
+                            <span>Write your e-mail:</span>
+                            <div class="order-error">This field must be filled</div>
+                            <input type="e-mail" placeholder="example@gmail.com">
+                        </div>
+
+                        <div class="order__tel">
+                            <span>Write your telephone:</span>
+                            <div class="order-error">This field must be filled</div>
+                            <input type="number" placeholder="56729480">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="order-modal__button">Order</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- check order modal input -->
+        <script>
+            let input = document.querySelectorAll('.order input');
+            let closeButton = document.querySelector('.order-modal__button');
+            let orderError = document.querySelectorAll('.order-error');
+      
+            input.forEach(el => {
+              el.onkeypress = () => {
+                closeButton.setAttribute('data-bs-dismiss' , 'modal');
+                let inpValues = [];
+      
+                input.forEach(el => {
+                  inpValues.push(el.value);
+                })
+      
+                inpValues.forEach(el => {
+                  if (el == '') {
+                    closeButton.removeAttribute('data-bs-dismiss', 'modal');
+                  }
+                })
+              }
+            })
+      
+            closeButton.addEventListener('click', () => {
+                closeButton.removeAttribute('data-bs-dismiss');
+      
+                input.forEach((el , index) => {
+
+                  if (el.value == '') {
+                    orderError[index].style.opacity = 1;
+                  } else {
+                    orderError[index].style.opacity = 0;
+                  }
+                })
+            });
+          </script>
+
+        <script>
+            let orderModal = document.querySelector('#orderModal');
+            let orderOpenButtons = document.querySelectorAll('.pricing-table__button');
+            let inputColor;
+
+            orderOpenButtons.forEach(el => {
+                el.onclick = () => {
+                    // write title in order modal
+                    orderModal.querySelector('.modal-title').innerHTML = el.parentNode.querySelector('.order-modal__title').innerHTML;
+                    inputColor = el.dataset.bgColor;
+
+                    orderModal.querySelector('.modal-title').style.color = inputColor;
+
+                    orderModal.querySelectorAll('input').forEach(el => {
+                        el.onfocus = () => {
+                            el.style.borderColor = inputColor;
+                        }
+                        
+                        el.onblur = () => {
+                            el.style.borderColor = '';
+                        }
+                    })
+                }
+            })
+
+        </script>
+        <!-- /pricing table -->
+
+        <!-- testimonials -->
+       <section class="section_dark section anchors-section" id="testimonials">
+            <div class="testimonials">
+                <div class="container">
+                    <div class="row">
+                        <div class="testimonials__title section-header">
+                            <p class="section-title center">07</p>
+                            <h3>Testimonials</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="testimonials__main">
+                        <div class="testimonials__slider">
+                            <div class="testimonials__slider-img"><img src="img/slider-img.png" alt=""></div>
+                            <div class="testimonials__slider-slides">
+                                <div class="testimonials__slider-slide">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut nulla eaque officiis ullam voluptatem deleniti, voluptatibus exercitationem iusto molestiae dolores laborum consectetur, quos fugit error sequi expedita tenetur sit architecto saepe. Labore iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+                                <div class="testimonials__slider-slide">
+                                    <p>Lorem  dolor sit amet consectetur adipisicing elit. Aspernatur aut nulla eaque officiis ullam voluptatem deleniti, voluptatibus exercitationem iusto molestiae dolores laborum consectetur, quos fugit error sequi  tenetur sit architecto saepe. Labore iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+                                <div class="testimonials__slider-slide">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut nulla eaque officiis ullam voluptatem deleniti, voluptatibus exercitationem iusto molestiae dolores laborum consectetur, quos fugit error sequi expedita tenetur sit architecto saepe. Labore iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+                                <div class="testimonials__slider-slide">
+                                    <p>If you want to be kept up to date with new articles, join our newsletter!
+                                        We'll send an email about once a month with new articles, tools and extra content. quos fugi expedita tenetur sit architecto saepe. Labore iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+                                <div class="testimonials__slider-slide">
+                                    <p>Lorem ipsum dolor sit amet consectetur elit. Aspernatur aut nulla eaque officiis ullam voluptatem deleniti, voluptatibus exercitationem iusto molestiae dolores laborum consectetur, quos fugit error sequi expedita sit architecto saepe. Labore iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+                                <div class="testimonials__slider-slide">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut nulla eaque officiis ullam voluptatem deleniti, voluptatibus exercitationem iusto molestiae dolores laborum consectetur,  fugit error sequi expedita tenetur sit architecto saepe. iste reprehenderit ratione eum doloremque, assumenda aut.z</p>
+                                    <img src="img/slider-text.png" alt="" loading='lazy'>
+                                    <h5>Melina Albercht</h5>
+                                    <h6>Founder, Ting Tang</h6>
+                                </div>
+
+                                <div class="testimonials__controls">
+                                    <span class="testimonials__control testimonials__control_active"></span>
+                                    <span class="testimonials__control"></span>
+                                    <span class="testimonials__control"></span>
+                                    <span class="testimonials__control"></span>
+                                    <span class="testimonials__control"></span>
+                                    <span class="testimonials__control"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials animation -->
+        <script>
+            let testimonials = document.querySelector('#testimonials');
+            window.addEventListener('scroll' ,(e) => {
+			    let top;
+                if (window.innerWidth >= 768) {
+                    top = Math.abs(document.querySelector('body').getBoundingClientRect().top - window.innerHeight + 700)
+                } //a = current body height}
+                else {top = Math.abs(document.querySelector('body').getBoundingClientRect().top - window.innerHeight + 1000)}; //a = current body height}
+                if (top >= testimonials.offsetTop) {
+                    testimonials.querySelector('.testimonials__slider-slide').classList.add('testimonials__slider-slide_active')
+                };
+            });
+        </script>
+
+        <!-- /testimonials -->
+
+        <!-- why us -->
+        <section class="section" id="why-us">
+            <div class="why-us">
+                <div class="container">
+                    <div class="row">
+                        <div class="why-us__title section-header">
+                            <p class="section-title center">08</p>
+                            <h3>Why Select Us?</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row why-us__cards">
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/1.png" alt="">
+                                <h5>Business<br>Growth</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/2.png" alt="">
+                                <h5>Unlimited<br>Revisions</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/3.png" alt="">
+                                <h5>Pertection<br>Ultimate</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/4.png" alt="">
+                                <h5>Smart<br>Experience</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/5.png" alt="">
+                                <h5>Strict<br>Deadline</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                        <div class="why-us__card col-xl-4 col-md-6 col-sm-12 why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <div class="why-us__card-title">
+                                <img src="img/why-us/6.png" alt="">
+                                <h5>Award-winning<br>Company</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint aliquid dolor. Labore, adipisci sit. Nobis repellendus minima tempora vitae.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 why-us__get-started why-us__animation lazy-load" data-lazy-class="why-us__animation_active">
+                            <h4>Start your journy with us now</h4>
+                            <a href="#contact">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- /why us -->
+
+        <!-- our blog -->
+        <section class="section anchors-section" id="blog">
+            <div class="our-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="why-us__title section-header">
+                            <p class="section-title center">09</p>
+                            <h3>Our Blog.</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row our-blog__cards">
+                        <div class="col-lg-6 col-12 our-blog__card_left">
+                            <div class="our-blog__card our-blog__card-right our-blog__card_active">
+                                <img src="img/our-blog-img.png" alt="">
+                                <div class="our-blog__card-text">
+                                    <div class="our-blog__card-date">
+                                        <h6 class="our-blog__card-h6_red">DIMIAN SCHREIDER</h6>
+                                        <p>December 10, 2015</p>
+                                    </div>
+
+                                    <h5>Google View adds virtual reality support</h5>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo nostrum in ex omnis dolorem deleniti doloremque cumque quae exercitationem totam?Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+
+                            <div class="our-blog__card-line our-blog__card-line_red"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 our-blog__cards-right">
+                            <div class="our-blog__card-right our-blog__card">
+                                <img src="img/our-blog-img.png" alt="">
+                                <div class="our-blog__card-text">
+                                    <div class="our-blog__card-date">
+                                        <h6 class="our-blog__card-h6_green">DIMIAN SCHREIDER</h6>
+                                        <p>December 11, 2015</p>
+                                    </div>
+
+                                    <h5>Google Street View adds virtual reality support</h5>
+                                    <p>Lorem ipsum dolor sit, ang elit. Quo nostrum in ex omnis dolorem doloremque cumque quae exercitationem totam?Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+
+                                <div class="our-blog__card-line our-blog__card-line_green"></div>
+                            </div>
+                            <div class="our-blog__card-right our-blog__card">
+                                <img src="img/our-blog-img.png" alt="">
+                                <div class="our-blog__card-text">
+                                    <div class="our-blog__card-date">
+                                        <h6 class="our-blog__card-h6_violet">DIMIAN SCHREIDER</h6>
+                                        <p>December 12, 2015</p>
+                                    </div>
+
+                                    <h5>Google Street View adds reality support</h5>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo nostrum in ex omnis  totam?Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+
+                                <div class="our-blog__card-line our-blog__card-line_violet"></div>
+                            </div>
+                            <div class="our-blog__card-right our-blog__card">
+                                <img src="img/our-blog-img.png" alt="">
+                                <div class="our-blog__card-text">
+                                    <div class="our-blog__card-date">
+                                        <h6 class="our-blog__card-h6_orange">DIMIAN SCHREIDER</h6>
+                                        <p>December 13, 2015</p>
+                                    </div>
+
+                                    <h5>Google Street View adds virtual reality support</h5>
+                                    <p>Lorem ipsum dolor sit, consectetur adipisicing elit. Quo nostrum in ex omnis dolorem deleniti doloremque cumque quae exercitationem totam?Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
+
+                                <div class="our-blog__card-line our-blog__card-line_orange"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / our blog -->
+
+        <!-- subscribe to newsletter -->
+        <section class="section">
+            <div class="newsletter">
+                <h4>Subscribe to Newsletter</h4>
+                <form class="newsletter__form">
+                    <input required type="email" placeholder="Enter your email">
+                    <button>SUBSCRIBE NOW</button>
+                </form>
+            </div>
+        </section>
+        <!-- /subscribe to newsletter -->
+
+        <!-- get in touch -->
+        <section class="section anchors-section" id="contact">
+            <div class="in-touch">
+                <div class="container">
+                    <div class="row">
+                        <div class="in-touch__title section-header">
+                            <p class="section-title center">10</p>
+                            <h3>Get in Touch</h3>
+                            <p>We understand your requirement and provide quality works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <form action="" class="in-touch__form row">
+                        <div class="col-md-6 col-sm-12"><input type="text" required class="text-center" placeholder="Your Name"></div>
+                        <div class="col-md-6 col-sm-12"><input type="email" required class="text-center" placeholder="Your Email"></div>
+                        <div class="col-md-6 col-sm-12"><input type="text" required class="text-center" placeholder="Subject"></div>
+                        <div class="col-md-6 col-sm-12"><input type="text" required class="text-center" placeholder="Project Budget"></div>
+                        <div class="col-12"><textarea class="text-center your-message" placeholder="Your Message"></textarea></div>
+                        <div class="col-12 text-center"><button type='submit' class="text-center">SEND MESSAGE</button></div>
+                    </form>
+                </div>
+
+                <footer class="footer container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <div class="footer__item footer__item-img">
+                                <img src="img/footer-img.png" alt="">
+                            </div>
+
+                            <div class="footer__line footer__line_red"></div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12">
+                            <div class="footer__item">
+                                <h5 class="footer__h5_green">Alexis LLC.</h5>
+                                <p>Lorem, ipsum dolor.</p>
+                                <p>Lorem, ipsum.</p>
+                            </div>
+
+                            <div class="footer__line footer__line_green"></div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12">
+                            <div class="footer__item">
+                                <h5 class="footer__h5_violet">Alexis LLC UK.</h5>
+                                <p>Lorem, ipsum dolor.</p>
+                                <p>Lorem, ipsum.</p>
+                            </div>
+
+                            <div class="footer__line footer__line_violet"></div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12">
+                            <div class="footer__item">
+                                <h5 class="footer__h5_orange">Follow Us.</h5>
+                                <div class="footer__links d-flex">
+                                    <img src="img/footer-social1.png" alt="" class="footer__link">
+                                    <img src="img/footer-social2.png" alt="" class="footer__link">
+                                    <img src="img/footer-social3.png" alt="" class="footer__link">
+                                    <img src="img/footer-social4.png" alt="" class="footer__link">
+                                </div>
+                            </div>
+
+                            <div class="footer__line footer__line_orange"></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <!-- /get in touch -->
+    </main>
+
+
+</body>
+</html>
